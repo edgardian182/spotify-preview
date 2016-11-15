@@ -17,3 +17,19 @@ input {
     height: 20px;
     text-indent: 5px;
 }
+
+.info {
+    line-height: 0px;
+    padding: 0px 1px;
+    padding-right: 15px;
+    margin-top: -10px
+}
+
+audio {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
