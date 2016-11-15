@@ -20,23 +20,23 @@
 
     <script id="results-template" type="text/x-handlebars-template">
         {{#if tracks.items}}
-        {{#each tracks.items}}
+            {{#each tracks.items}}
 
-            <div class="row">
-                <div class="col-sm-4">
-                    <img src="{{this.album.images.0.url}}" class="img-responsive">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src="{{this.album.images.0.url}}" class="img-responsive">
+                    </div>
+                    <div class="col-sm-8 info">
+                        <h4>{{this.name}}</h4>
+                        <p>{{this.album.artists.0.name}}</p>
+                        <audio controls>
+                            <source src="{{this.preview_url}}" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
                 </div>
-                <div class="col-sm-8 info">
-                    <h4>{{this.name}}</h4>
-                    <p>{{this.album.artists.0.name}}</p>
-                    <audio controls>
-                        <source src="{{this.preview_url}}" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-            </div>
-            <br>
-        {{/each}}
+                <br>
+            {{/each}}
         {{else}}
             <p>No se encontraron resultados</p>
         {{/if}}
